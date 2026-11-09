@@ -1,8 +1,11 @@
 import { defineStore } from 'pinia';
 
+// CARTO basemap API key（會出現在前端，屬公開金鑰；請在 CARTO 後台限制可用網域）
+const CARTO_API_KEY = 'cb1_3r2s_1_bcae323a8f32f4805fe36bd4';
+
 export const useDefineStore = defineStore('define', {
   state: () => ({
-    selectedBasemap: 'esri_light_gray', // 當前選中的底圖
+    selectedBasemap: 'carto_light_labels', // 當前選中的底圖
     // 地圖視圖狀態
     mapView: {
       center: [25.051474, 121.557989], // 地圖中心點 [緯度, 經度] - 台北市中心
@@ -54,7 +57,22 @@ export const useDefineStore = defineStore('define', {
         value: 'terrain',
         url: 'https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png',
       },
-      // CARTO 底圖現在需要 API key，改用免金鑰的 Esri 灰階底圖
+      // CARTO 底圖需要 API key（前端公開金鑰，請在 CARTO 後台限制網域）
+      {
+        label: 'Carto Light',
+        value: 'carto_light_labels',
+        url: `https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png?key=${CARTO_API_KEY}`,
+      },
+      {
+        label: 'Carto Dark',
+        value: 'carto_dark_labels',
+        url: `https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png?key=${CARTO_API_KEY}`,
+      },
+      {
+        label: 'Carto Voyager',
+        value: 'carto_voyager',
+        url: `https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png?key=${CARTO_API_KEY}`,
+      },
       {
         label: 'Esri 淺灰底圖',
         value: 'esri_light_gray',
