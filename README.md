@@ -194,7 +194,7 @@
 
 ```bash
 git clone [專案網址]
-cd long-term-care-web
+cd taipei-longterm-care
 ```
 
 2. **安裝依賴**
@@ -624,7 +624,7 @@ const exportVisibleLayers = () => {
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
   a.href = url;
-  a.download = 'long-term-care-data.json';
+  a.download = 'taipei-longterm-care-data.json';
   a.click();
 };
 ```
@@ -983,7 +983,7 @@ self.addEventListener('fetch', (event) => {
 
 MIT License
 
-Copyright (c) 2024 Long-term Care Web Project
+Copyright (c) 2024 Taipei Longterm Care Project
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in
@@ -1033,10 +1033,10 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 - **專案維護者**: [Kevin Cheng](https://github.com/kevin7261)
 - **專案首頁**:
-  [GitHub Repository](https://github.com/github/long-term-care-web)
-- **線上展示**: [GitHub Pages](https://github.com/long-term-care-web)
+  [GitHub Repository](https://github.com/wenlab501/taipei-longterm-care)
+- **線上展示**: [GitHub Pages](https://wenlab501.github.io/taipei-longterm-care)
 - **問題回報**:
-  [GitHub Issues](https://github.com/github/long-term-care-web/issues)
+  [GitHub Issues](https://github.com/wenlab501/taipei-longterm-care/issues)
 
 ## 🙏 致謝
 
